@@ -1,0 +1,33 @@
+services:
+  # Web Service for Ultimate Optimizer App
+  - type: web
+    name: ultimate-optimizer-app
+    runtime: node
+    region: oregon
+    plan: starter
+    branch: main
+    buildCommand: npm install && npm run build
+    startCommand: node backend/dist/server.js
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: NODE_VERSION
+        value: 18
+      - key: WIX_APP_ID
+        value: PLACEHOLDER_APP_ID
+      - key: WIX_APP_SECRET
+        sync: false  # Mark as secret, will be set manually in dashboard
+      # DATABASE_URL will be added in Phase 2 when PostgreSQL is connected
+      # OPENAI_API_KEY will be added in Phase 4
+      # WIX_REDIRECT_URI will be added in Phase 2
+
+# PostgreSQL database (to be added in Phase 2)
+# databases:
+#   - name: ultimate-optimizer-db
+#     plan: starter
+#     region: oregon
+#     databaseName: ultimate_optimizer
+#     user: ultimate_optimizer_user

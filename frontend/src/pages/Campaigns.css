@@ -1,0 +1,297 @@
+.campaigns-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 24px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.campaigns-tabs .tab-btn {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.campaigns-tabs .tab-btn:hover {
+  color: #333;
+}
+
+.campaigns-tabs .tab-btn.active {
+  color: #116dff;
+  border-bottom-color: #116dff;
+}
+
+.campaigns-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.campaign-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.campaign-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.campaign-header:hover {
+  background: #f8f9fa;
+}
+
+.campaign-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.campaign-stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  font-size: 13px;
+  color: #666;
+  padding: 4px 12px;
+  background: #f0f0f0;
+  border-radius: 12px;
+}
+
+.stat.error {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.campaign-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-archive,
+.btn-restore,
+.btn-delete {
+  padding: 8px 16px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: white;
+}
+
+.btn-archive:hover {
+  background: #fff8e6;
+  border-color: #ffc107;
+  color: #856404;
+}
+
+.btn-restore:hover {
+  background: #e6f4ea;
+  border-color: #00c853;
+  color: #137333;
+}
+
+.btn-delete {
+  color: #c62828;
+}
+
+.btn-delete:hover {
+  background: #ffebee;
+  border-color: #ef5350;
+}
+
+.expand-arrow {
+  font-size: 12px;
+  color: #666;
+  transition: transform 0.2s;
+}
+
+.expand-arrow.open {
+  transform: rotate(180deg);
+}
+
+.campaign-details {
+  padding: 0 20px 20px 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.scheduled-blogs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.scheduled-blog-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+.blog-info {
+  flex: 1;
+}
+
+.blog-info h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.blog-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.scheduled {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-badge.processing {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.completed {
+  background: #e6f4ea;
+  color: #137333;
+}
+
+.status-badge.failed {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.status-badge.cancelled {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.blog-date {
+  font-size: 13px;
+  color: #666;
+}
+
+.blog-error {
+  margin: 8px 0 0 0;
+  font-size: 13px;
+  color: #c62828;
+}
+
+.btn-remove {
+  padding: 8px 16px;
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.btn-remove:hover {
+  background: #cc0000;
+}
+
+.btn-view-blog {
+  padding: 8px 16px;
+  background: #116dff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.btn-view-blog:hover {
+  background: #0d5dd9;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background: #116dff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background: #0d5dd9;
+}
+
+.empty-state {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.empty-state p {
+  color: #666;
+  font-size: 15px;
+  margin: 0 0 20px 0;
+}
+
+@media (max-width: 768px) {
+  .campaign-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .campaign-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .scheduled-blog-item {
+    flex-direction: column;
+  }
+
+  .btn-remove {
+    width: 100%;
+  }
+}
